@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Liste d'epicerie</title>
+  <link rel="stylesheet" href="decoration/application.css">
+  <style></style>
+  <script src="modele/Epicerie.js"></script>
+  <script src="donnee/EpicerieDAO.js"></script>
+  <script src="vue/VueAjouterEpicerie.js"></script>
+  <script src="vue/VueListeEpicerie.js"></script>
+ 
+  <script defer src="Application.js"></script>
+
+</head>
+<body>
+  <div id="page-chargement-application">Chargement de l'application liste epicerie</div>
+
+
+  <script type="plain/text" id="html-vue-liste-epicerie">
+  <div class="page">
+    <h1>Liste des articles d'épicerie</h1>
+    <a class="action" href="#ajouter-epicerie">Ajouter un article</a>
+    <ul id="liste-epicerie">
+      <li><a href="#epicerie/{Epicerie.id}" class="liste-epicerie-item">{Epicerie.nom}</a></li>
+    </ul>
+  </div>
+  </script>
+
+  <script type="plain/text" id="html-vue-ajouter-epicerie">
+  <div class="page">
+    <h1>Ajouter un article d'epicerie</h1>
+    <form id="formulaire-ajouter">
+      <fieldset>
+        <legend>Identification de l'article</legend>
+        <div>
+          <label for="epicerie-nom">Nom</label>
+          <input type="text" id="epicerie-nom"/>
+        </div>
+        <div>
+          <label for="epicerie-marque">Marque</label>
+          <input type="text" id="epicerie-marque"/>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Detail sur l'article</legend>
+        <div>
+          <label for="epicerie-description">Description</label>
+          <textarea id="epicerie-description"></textarea>
+        </div>
+      </fieldset>
+      <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
+    </form>
+    <a href="#" class="action">Annuler et revenir a la liste</a>
+  </div>
+  </script>
+
+</body>
+</html>
