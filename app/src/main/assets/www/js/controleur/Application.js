@@ -1,5 +1,5 @@
 ﻿class Application {
-  constructor(window, epicerieDAO, vueListeEpicerie, vueAjouterEpicerie){
+  constructor(window, epicerieDAO, vueListeEpicerie, vueAjouterEpicerie, vueEpicerie){
 
     this.window = window;
     this.epicerieDAO = epicerieDAO;
@@ -11,6 +11,8 @@
     /*this.vueListeEpicerie.initialiserListeEpicerie(this.epicerieDAO.lister());
     this.vueListeEpicerie.afficher();*/
     this.vueAjouterEpicerie.initialiserActionAjouterEpicerie(epicerie =>this.actionAjouterEpicerie(epicerie));
+
+    this.vueEpicerie = vueEpicerie;
 
     this.window.addEventListener("hashchange", () =>this.naviguer());
 
@@ -29,6 +31,14 @@
 
       this.vueAjouterEpicerie.afficher();
 
+    }else{
+
+      let navigation = hash.match(/^#epicerie\/([0-9]+)/);
+      let idEpicerie = navigation[1];
+
+      this.vueEpicerie.initialiserEpicerie(this.epicerieDAO.lister()[idEpicerie]);
+      this.vueEpicerie.afficher();
+
     }
   }
 
@@ -40,5 +50,5 @@
 
 }
 
-new Application(window, new EpicerieDAO(), new VueListeEpicerie(), new VueAjouterEpicerie());
+new Application(window, new EpicerieDAO(), new VueListeEpicerie(), new VueAjouterEpicerie(), new VueEpicerie());
 

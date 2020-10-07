@@ -1,13 +1,14 @@
 ﻿class EpicerieDAO{
   constructor(){
 
-    this.listeEpicerie = [{nom:"pomme", marque:"macintosh", description:"Prete a manger", id:0},
-                          {nom:"piment", marque:"jalapenio", description:"Tres piquant", id:1},
-                          {nom:"pain", marque:"pom", description:"Tres frais", id:2}]
+    this.listeEpicerie = [];
 
   }
 
   lister(){
+    if(localStorage['epicerie']){
+      this.listeEpicerie = JSON.parse(localStorage['epicerie']);
+    }
 
     for(let position in this.listeEpicerie){
       let epicerie = new Epicerie(this.listeEpicerie[position].nom,
@@ -30,6 +31,8 @@
       epicerie.id = 0;
 
     this.listeEpicerie[epicerie.id] = epicerie;
+    localStorage['epicerie'] = JSON.stringify(this.listeEpicerie);
+    console.log("JSON.stringify(this.listeEpicerie) : " + JSON.stringify(this.listeEpicerie));
   }
 
 }

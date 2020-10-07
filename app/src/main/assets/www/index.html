@@ -2,14 +2,15 @@
 <html>
 <head>
   <title>Liste d'epicerie</title>
-  <link rel="stylesheet" href="decoration/application.css">
+  <link rel="stylesheet" href="css/application.css">
   <style></style>
-  <script src="modele/Epicerie.js"></script>
-  <script src="donnee/EpicerieDAO.js"></script>
-  <script src="vue/VueAjouterEpicerie.js"></script>
-  <script src="vue/VueListeEpicerie.js"></script>
+  <script src="js/modele/Epicerie.js"></script>
+  <script src="js/donnee/EpicerieDAO.js"></script>
+  <script src="js/vue/VueAjouterEpicerie.js"></script>
+  <script src="js/vue/VueEpicerie.js"></script>
+  <script src="js/vue/VueListeEpicerie.js"></script>
  
-  <script defer src="Application.js"></script>
+  <script defer src="js/controleur/Application.js"></script>
 
 </head>
 <body>
@@ -25,6 +26,16 @@
     </ul>
   </div>
   </script>
+
+  <script type="plain/text" id="html-vue-epicerie">
+    <div class="page">
+      <h1>Article d'epicerie</h1>
+      <h2 id="epicerie-nom"></h2>
+      <p id="epicerie-marque"></p>
+      <p id="epicerie-description"></p>
+      <a href="#" class="action">Revenir a la liste</a>
+    </div>
+    </script>
 
   <script type="plain/text" id="html-vue-ajouter-epicerie">
   <div class="page">
