@@ -18,6 +18,7 @@
     for(var numeroEpicerie in this.listeEpicerieDonnee){
       let listeEpicerieItemHTMLRemplacement = listeEpicerieItemHTML;
       listeEpicerieItemHTMLRemplacement = listeEpicerieItemHTMLRemplacement.replace("{Epicerie.id}",this.listeEpicerieDonnee[numeroEpicerie].id);
+      listeEpicerieItemHTMLRemplacement = listeEpicerieItemHTMLRemplacement.replace("{Epicerie.id}",this.listeEpicerieDonnee[numeroEpicerie].id);
       listeEpicerieItemHTMLRemplacement = listeEpicerieItemHTMLRemplacement.replace("{Epicerie.nom}",this.listeEpicerieDonnee[numeroEpicerie].nom);
       listeEpicerieHTMLRemplacement += listeEpicerieItemHTMLRemplacement;
     }

@@ -2,6 +2,7 @@
   constructor(){
 
     this.listeEpicerie = [];
+    //this.epicerie = null;
 
   }
 
@@ -34,6 +35,25 @@
     localStorage['epicerie'] = JSON.stringify(this.listeEpicerie);
     console.log("JSON.stringify(this.listeEpicerie) : " + JSON.stringify(this.listeEpicerie));
   }
+
+  modifier(epicerie)
+  {
+    this.listeEpicerie[epicerie.id] = null;
+
+        console.log("JSON.stringify(this.listeEpicerie) : " + JSON.stringify(this.listeEpicerie));
+        console.log("epicerie : " + epicerie.nom + epicerie.marque + epicerie.description + epicerie.id);
+
+        this.listeEpicerie[epicerie.id] = epicerie;
+        localStorage['epicerie'] = JSON.stringify(this.listeEpicerie);
+
+        console.log("JSON.stringify(this.listeEpicerie) : " + JSON.stringify(this.listeEpicerie));
+        
+  }
+  /*modifier = function(epicerie) {
+
+    this.listeEpicerie[epicerie.id] = epicerie;
+    localStorage['epicerie'] = JSON.stringify(this.listeEpicerie);
+};*/
 
 }
 
