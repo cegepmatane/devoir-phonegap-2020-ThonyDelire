@@ -4,14 +4,14 @@
 
 :root {
   --theme-rouge: #fd341f;
-  --theme-blanc-transparent: rgba(255,255,255,0.3);
+  --theme-blanc-transparent: rgba(255, 176, 176, 0.6);
   --theme-bleu-pale: rgb(202, 200, 200);
   --theme-bleu-fonce: rgb(155, 155, 155);
   --theme-vert: #408450;
   --theme-blanc: white;
   --theme-noir: black;
 
-  --theme-bordure-rondeur: 0.5rem;
+  
 }
 
 html {
@@ -23,7 +23,8 @@ html {
 }
 
 .liste-epicerie-item {
-  color:var(--theme-noir);
+  color: white;
+  font-size: 1.5rem;
   text-transform : capitalize;
   text-decoration:none;
 }
@@ -33,7 +34,6 @@ html {
   display:block;
   margin-bottom:0.25rem;
   background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-bordure-rondeur);
   padding:0.25rem;
   padding-left:1.50rem;
   box-shadow: 2px 2px var(--theme-blanc);
@@ -55,9 +55,9 @@ html {
 }
 
 fieldset {
-  color:var(--theme-noir);
-  border-color: var(--theme-noir);
-  border-radius:var(--theme-bordure-rondeur);
+  color:white;
+  border-color: white;
+  background-color: rgba(255, 73, 73, 0.6);
 }
 
 input[type="text"],
@@ -65,8 +65,8 @@ textarea {
   display:block;
   width:100%;
   border:none;
+  color: white;
   background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-bordure-rondeur);
 }
 
 #page-chargement-application{
@@ -93,10 +93,10 @@ textarea {
 
 @keyframes pulse {
   0% {
-    background-color:var(--theme-bleu-fonce);
+    background-color:rgb(235, 133, 85);
   }
   100% {
-    background-color:var(--theme-bleu-pale);
+    background-color:rgb(255, 30, 0);
   }
 }
 
@@ -104,7 +104,8 @@ textarea {
 
 .page {
   position:relative;
-  background-color:var(--theme-bleu-pale);
+  background-color: red;
+  background-image: linear-gradient(to bottom right, red, yellow);
   padding:5%;
   min-height: 100vh;
   box-sizing: border-box;
@@ -114,17 +115,17 @@ textarea {
   background-position:right bottom;
   background-attachment:fixed;
   background-size: 50%;
-  color:var(--theme-noir);
+  color:white;
 }
 
 
 .page h1{
   text-align:center;
-  font-size:1.5rem;
+  font-size:2rem;
   font-weight:normal;
   line-height:1.8rem;
-  color:var(--theme-noir);
-  text-shadow: 2px 2px var(--theme-blanc);
+  color: white;
+  text-shadow: 2px 2px var(--theme-noir);
 
 }
 
@@ -132,7 +133,6 @@ textarea {
 .page p {
   background-color:var(--theme-blanc-transparent);
   border:0px transparent solid;
-  border-radius:var(--theme-bordure-rondeur);
   padding:0.25rem;
 }
 
@@ -142,10 +142,9 @@ textarea {
   display:block;
   text-decoration: none;
   font-family:sans-serif;
-  background-color:#706d6a;
+  background-color:#a30000;
   color:var(--theme-blanc);
   border:0px transparent solid;
-  border-radius:var(--theme-bordure-rondeur);
   padding:0.25rem;
   font-size:1rem;
   text-align:center;
@@ -155,8 +154,14 @@ textarea {
   margin-top:0.25rem;
   margin-bottom:0.25rem;
   box-shadow: 2px 2px var(--theme-blanc);
+  border-radius: 0.5rem;
 }
 
 .action:active {
   border:0px transparent solid;
+}
+
+.article
+{
+  margin-top: 5%;
 }
