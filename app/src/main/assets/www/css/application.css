@@ -13,6 +13,22 @@
 
   
 }
+.titre{
+  width: 50%;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:50%; top:0px;}
+  50%   {background-color:red; left:0px; top:0px;}
+  75%  {background-color:yellow; left:50%; top:0px;}
+  100%   {background-color:red; left:0px; top:0px;}
+}
 
 html {
   font-size:20px;
